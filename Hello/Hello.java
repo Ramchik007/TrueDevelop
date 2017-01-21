@@ -1,17 +1,17 @@
-import java.io.*;
+п»їimport java.io.*;
 import java.util.Scanner;
 
 public class Hello {
     public static void main(String[] args) {
-        System.out.print("Введите Ваше имя :  ");
+        System.out.print("Р’РІРµРґРёС‚Рµ Р’Р°С€Рµ РёРјСЏ :  ");
         Scanner sc = new Scanner(System.in);
         String S;
         if(sc.hasNextLine()) {
             S = sc.nextLine();
-            System.out.println("Привет " + S + "!");
+            System.out.println("РџСЂРёРІРµС‚ " + S + "!");
         }
         else {
-            System.out.println("Ошибка ввода");
+            System.out.println("РћС€РёР±РєР° РІРІРѕРґР°");
         }
     }
 

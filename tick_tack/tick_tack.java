@@ -1,4 +1,4 @@
-import java.lang.reflect.Array;
+п»їimport java.lang.reflect.Array;
 import java.util.Scanner;
 import java.util.Random;
   
@@ -8,62 +8,62 @@ public class tick_tack {
 
         Scanner sc = new Scanner(System.in);
 
-                                             //объявление переменных для рэндома
+                                             //РѕР±СЉСЏРІР»РµРЅРёРµ РїРµСЂРµРјРµРЅРЅС‹С… РґР»СЏ СЂСЌРЅРґРѕРјР°
         int a = 1;
         int b = 9;
         int program_choice=11;
         //int d = (int) (Math.random()*a + Math.random()*b);
 
-        int Err = 2;                                      //флаги
+        int Err = 2;                                      //С„Р»Р°РіРё
         int Win1 = 0;
-        int Endplace = 0;                                                // переменные выбора игрока и программы
+        int Endplace = 0;                                                // РїРµСЂРµРјРµРЅРЅС‹Рµ РІС‹Р±РѕСЂР° РёРіСЂРѕРєР° Рё РїСЂРѕРіСЂР°РјРјС‹
         int user_choice =0;
         //int program_choice =12;
 
         String user = "";
         String program = "";
         String toint = "";
-        //int dlina = toint.length();                                                // инициализация поля-массива , заполнение элементов
+        //int dlina = toint.length();                                                // РёРЅРёС†РёР°Р»РёР·Р°С†РёСЏ РїРѕР»СЏ-РјР°СЃСЃРёРІР° , Р·Р°РїРѕР»РЅРµРЅРёРµ СЌР»РµРјРµРЅС‚РѕРІ
         String Array[][];
         Array = new String [5][4];
 
-                                                                        //0я строка
+                                                                        //0СЏ СЃС‚СЂРѕРєР°
             Array[0][0] = " 1 |";
             Array[0][1] = " 2 |";
             Array[0][2] = " 3 ";
             Array[0][3] = "";
-                                                                            //1я строка
+                                                                            //1СЏ СЃС‚СЂРѕРєР°
             Array[1][0] = "--- ";
             Array[1][1] = "--- ";
             Array[1][2] = "--- ";
             Array[1][3] = "";
-                                                                                //2я строка
+                                                                                //2СЏ СЃС‚СЂРѕРєР°
             Array[2][0] = " 4 |";
             Array[2][1] = " 5 |";
             Array[2][2] = " 6 ";
             Array[2][3] = "";
-                                                                                            //3я строка
+                                                                                            //3СЏ СЃС‚СЂРѕРєР°
             Array[3][0] = "--- ";
             Array[3][1] = "--- ";
             Array[3][2] = "--- ";
             Array[3][3] = "";
-                                                                                                    //4я строка
+                                                                                                    //4СЏ СЃС‚СЂРѕРєР°
             Array[4][0] = " 7 |";
             Array[4][1] = " 8 |";
             Array[4][2] = " 9 ";
             Array[4][3] = "";
 
 
-                                                //Тело игры :
+                                                //РўРµР»Рѕ РёРіСЂС‹ :
 
         while((user_choice != 10)&(Err != 1) & (Win1 != 1)&(Endplace != 1)) {
 
-                                                     //начало цикла игры
+                                                     //РЅР°С‡Р°Р»Рѕ С†РёРєР»Р° РёРіСЂС‹
                 System.out.println("If you want to EXIT press 10 ");
                 System.out.println("Your choice: [1-9] :  ");
 				System.out.println();
                 printArray(Array);
-                System.out.println();                                  //тест рандома
+                System.out.println();                                  //С‚РµСЃС‚ СЂР°РЅРґРѕРјР°
                 System.out.println("Your choice: ");
 
                 if (sc.hasNextInt()) {
@@ -71,7 +71,7 @@ public class tick_tack {
                      program_choice = (int) (Math.random()*a + Math.random()*b);
                      //toint = toint + Integer.toString(user_choice);
 
-                     //тестовая проверка на совпадение выбора компьютера и пользователя зацикливание программы !!!
+                     //С‚РµСЃС‚РѕРІР°СЏ РїСЂРѕРІРµСЂРєР° РЅР° СЃРѕРІРїР°РґРµРЅРёРµ РІС‹Р±РѕСЂР° РєРѕРјРїСЊСЋС‚РµСЂР° Рё РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ Р·Р°С†РёРєР»РёРІР°РЅРёРµ РїСЂРѕРіСЂР°РјРјС‹ !!!
                         while (((user_choice == program_choice)|(program_choice==0)|(toint.contains(Integer.toString(program_choice))))&((toint.length()<8))) {
                             program_choice= (int) (Math.random()*a + Math.random()*b);
                             //toint = toint + Integer.toString(program_choice);
@@ -84,7 +84,7 @@ public class tick_tack {
                     //System.out.println(toint.length());                                                    //
 
 
-                     if (program_choice!= user_choice) {                                                     //часть крестиков
+                     if (program_choice!= user_choice) {                                                     //С‡Р°СЃС‚СЊ РєСЂРµСЃС‚РёРєРѕРІ
                          if ((user_choice == 1) && (Array[0][0] != " 0 |"))
                          {Array[0][0] = " X |"; toint = toint + Integer.toString(user_choice);}
                          else if ((user_choice == 2) && (Array[0][1] != " 0 |"))
@@ -103,15 +103,15 @@ public class tick_tack {
                          {Array[4][1] = " X |";toint = toint + Integer.toString(user_choice);}
                          else if ((user_choice == 9) && (Array[4][2] != " 0 "))
                          {Array[4][2] = " X ";toint = toint + Integer.toString(user_choice);}
-                         //экспериментально
+                         //СЌРєСЃРїРµСЂРёРјРµРЅС‚Р°Р»СЊРЅРѕ
 
 
                      }
-                                            //проверка на переполнение поля понять в какой части разместить
+                                            //РїСЂРѕРІРµСЂРєР° РЅР° РїРµСЂРµРїРѕР»РЅРµРЅРёРµ РїРѕР»СЏ РїРѕРЅСЏС‚СЊ РІ РєР°РєРѕР№ С‡Р°СЃС‚Рё СЂР°Р·РјРµСЃС‚РёС‚СЊ
 
 
 
-                    //часть ноликов
+                    //С‡Р°СЃС‚СЊ РЅРѕР»РёРєРѕРІ
 
                     if ((program_choice == 1) && (Array[0][0] != " X |")&&(Array[0][0] != " 0 |"))
                     {Array[0][0] = " 0 |"; toint = toint + Integer.toString(program_choice);}
@@ -135,7 +135,7 @@ public class tick_tack {
 
 
 
-                                                                                          // условия победы пользователя
+                                                                                          // СѓСЃР»РѕРІРёСЏ РїРѕР±РµРґС‹ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
                            if ((Array[0][0]==" X |")&(Array[0][1]==" X |")&(Array[0][2]==" X "))
                            {
                                System.out.println(" Congratulate, you win! ");
@@ -208,7 +208,7 @@ public class tick_tack {
                                     break;
                                 }
 
-                                                                                                //условия победы компьютера
+                                                                                                //СѓСЃР»РѕРІРёСЏ РїРѕР±РµРґС‹ РєРѕРјРїСЊСЋС‚РµСЂР°
 
 
                     if ((Array[0][0]==" 0 |")&(Array[0][1]==" 0 |")&(Array[0][2]==" 0 "))
@@ -287,13 +287,13 @@ public class tick_tack {
                 else {  System.out.println("IO Error , restart program");
                 Err = 1; }
             }
-                                                                                            //закрытие цикла игры
+                                                                                            //Р·Р°РєСЂС‹С‚РёРµ С†РёРєР»Р° РёРіСЂС‹
 
 
 
-    }                                                       //закрытие точки входа в программу
+    }                                                       //Р·Р°РєСЂС‹С‚РёРµ С‚РѕС‡РєРё РІС…РѕРґР° РІ РїСЂРѕРіСЂР°РјРјСѓ
 
-                                                            // функция вывода поля-массива
+                                                            // С„СѓРЅРєС†РёСЏ РІС‹РІРѕРґР° РїРѕР»СЏ-РјР°СЃСЃРёРІР°
     public static void printArray(String[][] Array) {
         for (int i = 0; i <= 4; i++) {
             for (int j = 0; j <= 3; j++) {
@@ -301,7 +301,7 @@ public class tick_tack {
             }
             System.out.println();
         }
-    }                                                           // конец функции вывода массива
+    }                                                           // РєРѕРЅРµС† С„СѓРЅРєС†РёРё РІС‹РІРѕРґР° РјР°СЃСЃРёРІР°
 
 
-}                                                               // закрытие класса
+}                                                               // Р·Р°РєСЂС‹С‚РёРµ РєР»Р°СЃСЃР°
