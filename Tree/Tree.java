@@ -1,35 +1,35 @@
-
+п»ї
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Tree { // class
 
-    public static void main(String[] args) throws Exception { // psv точка входа
+    public static void main(String[] args) throws Exception { // psv С‚РѕС‡РєР° РІС…РѕРґР°
         String S = "^";
         //int height = 40;
         int otstup = 1;
         String Array[];
 
 
-        System.out.println("Введите высоту Ели :  ");
+        System.out.println("В¬РІРµРґРёС‚Рµ РІС‹СЃРѕС‚Сѓ в‰€Р»Рё :  ");
         Scanner sc = new Scanner(System.in);
         int height;
         if(sc.hasNextInt()) {
             height = sc.nextInt();
               if (height>0){
 				  
-            // работа с массивом
+            // СЂР°Р±РѕС‚Р° СЃ РјР°СЃСЃРёРІРѕРј
             Array = new String[height+1];
-            for (int k = 0; k < height+1; k++){        //заполнение массива пробелами
+            for (int k = 0; k < height+1; k++){        //Р·Р°РїРѕР»РЅРµРЅРёРµ РјР°СЃСЃРёРІР° РїСЂРѕР±РµР»Р°РјРё
                 Array[k] = " "; }
 
-            // основная часть вывода фигуры на консоль
+            // РѕСЃРЅРѕРІРЅР°В¤ С‡Р°СЃС‚СЊ РІС‹РІРѕРґР° С„РёРіСѓСЂС‹ РЅР° РєРѕРЅСЃРѕР»СЊ
 
             for (int i = height; i > 0; i--) {
                 for (int j = 0; j <= height; j++)
 
                 {   Array[height-otstup] ="";
-                    Array[height] = "";//замена элементов массива последнего
+                    Array[height] = "";//Р·Р°РјРµРЅР° СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР° РїРѕСЃР»РµРґРЅРµРіРѕ
                     System.out.print(Array[j]);
                 }
 
@@ -40,17 +40,17 @@ public class Tree { // class
                     S = S + "^" + "^";
                     System.out.println();
                 }
-                else System.out.println("Ошибка");
+                else System.out.println("СњС€РёР±РєР°");
             }
               
-			  } else {System.out.println("Ошибка ввода");}
+			  } else {System.out.println("СњС€РёР±РєР° РІРІРѕРґР°");}
         }
         else {
-            System.out.println("Ошибка ввода");
+            System.out.println("СњС€РёР±РєР° РІРІРѕРґР°");
         }
 
 
-    }   //psv выход
+    }   //psv РІС‹С…РѕРґ
 
 
 } // class
