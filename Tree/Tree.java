@@ -40,13 +40,13 @@ public class Tree { // class
                     S = S + "^" + "^";
                     System.out.println();
                 }
-                else System.out.println("Ћшибка");
+                else System.out.println("Ошибка");
             }
               
-			  } else {System.out.println("Ћшибка ввода");}
+			  } else {System.out.println("Ошибка ввода");}
         }
         else {
-            System.out.println("Ћшибка ввода");
+            System.out.println("Ошибка ввода");
         }
 
 
